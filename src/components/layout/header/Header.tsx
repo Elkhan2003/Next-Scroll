@@ -46,7 +46,7 @@ const Header: FC = () => {
 	};
 
 	const handleSetInactive = () => {
-		window.scrollBy(0, 1);
+		window.scrollBy(0, 10);
 	};
 
 	return (
