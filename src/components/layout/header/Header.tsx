@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import { Link } from "react-scroll";
 import scss from "./Header.module.scss";
 
@@ -12,8 +12,6 @@ interface linksProps {
 }
 
 const Header: FC = () => {
-	const [activeLink, setActiveLink] = useState<string>("");
-
 	const links: linksProps[] = [
 		{
 			label: "Home",
@@ -40,10 +38,6 @@ const Header: FC = () => {
 			duration: 500
 		}
 	];
-
-	const handleSetActive = (to: string) => {
-		setActiveLink(to);
-	};
 
 	return (
 		<>
