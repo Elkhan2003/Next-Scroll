@@ -39,6 +39,13 @@ const Header: FC = () => {
 		}
 	];
 
+	const handleScroll = () => {
+		window.scrollBy(0, 3);
+		setTimeout(() => {
+			window.scrollBy(0, 1);
+		}, 600);
+	};
+
 	return (
 		<>
 			<div className={scss.header}>
@@ -52,6 +59,7 @@ const Header: FC = () => {
 							offset={link.offset}
 							duration={link.duration}
 							className="link__faegrtdhd"
+							onClick={handleScroll}
 						>
 							{link.label}
 						</Link>
