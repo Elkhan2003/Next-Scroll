@@ -6,7 +6,7 @@ const HomePage: FC = () => {
 	return (
 		<>
 			<Head>
-				<title>Home</title>
+				<title>Next Scroll</title>
 			</Head>
 			<div id="/" className={scss.home__page}>
 				<h4>lorem ipsum dolor sit amet, consectetur adip</h4>
