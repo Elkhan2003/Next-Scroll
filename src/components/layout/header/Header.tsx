@@ -45,10 +45,6 @@ const Header: FC = () => {
 		setActiveLink(to);
 	};
 
-	const handleSetInactive = () => {
-		window.scrollBy(0, 10);
-	};
-
 	return (
 		<>
 			<div className={scss.header}>
@@ -61,11 +57,7 @@ const Header: FC = () => {
 							smooth={link.smooth}
 							offset={link.offset}
 							duration={link.duration}
-							className={`${scss.link} ${
-								activeLink === link.to ? scss.active : ""
-							}`}
-							onSetActive={() => handleSetActive(link.to)}
-							onSetInactive={handleSetInactive}
+							className="link__faegrtdhd"
 						>
 							{link.label}
 						</Link>
