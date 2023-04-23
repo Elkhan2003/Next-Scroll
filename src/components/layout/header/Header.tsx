@@ -12,6 +12,8 @@ interface linksProps {
 }
 
 const Header: FC = () => {
+	const durationScroll = 500;
+
 	const links: linksProps[] = [
 		{
 			label: "Home",
@@ -19,7 +21,7 @@ const Header: FC = () => {
 			spy: true,
 			smooth: true,
 			offset: 0,
-			duration: 500
+			duration: durationScroll
 		},
 		{
 			label: "About",
@@ -27,7 +29,7 @@ const Header: FC = () => {
 			spy: true,
 			smooth: true,
 			offset: 0,
-			duration: 500
+			duration: durationScroll
 		},
 		{
 			label: "Contact",
@@ -35,14 +37,14 @@ const Header: FC = () => {
 			spy: true,
 			smooth: true,
 			offset: 0,
-			duration: 500
+			duration: durationScroll
 		}
 	];
 
 	const handleScroll = () => {
 		setTimeout(() => {
 			window.scrollBy(0, 1);
-		}, 500);
+		}, durationScroll);
 	};
 
 	return (
