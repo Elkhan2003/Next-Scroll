@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import scss from "./Header.module.scss";
 
@@ -12,6 +12,8 @@ interface linksProps {
 }
 
 const Header: FC = () => {
+	const [activeLink, setActiveLink] = useState<string>("");
+
 	const links: linksProps[] = [
 		{
 			label: "Home",
@@ -39,6 +41,10 @@ const Header: FC = () => {
 		}
 	];
 
+	const handleSetActive = (to: string) => {
+		setActiveLink(to);
+	};
+
 	const handleScroll = () => {
 		window.scrollBy(0, 3);
 		setTimeout(() => {
@@ -58,8 +64,11 @@ const Header: FC = () => {
 							smooth={link.smooth}
 							offset={link.offset}
 							duration={link.duration}
-							className={scss.link}
+							className={`${scss.link} ${
+								activeLink === link.to ? scss.active : ""
+							}`}
 							activeClass={scss.active}
+							onSetActive={() => handleSetActive(link.to)}
 							onClick={() => {
 								handleScroll();
 							}}
