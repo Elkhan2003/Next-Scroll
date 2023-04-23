@@ -44,7 +44,7 @@ const Header: FC = () => {
 	const handleScroll = () => {
 		setTimeout(() => {
 			window.scrollBy(0, 1);
-		}, durationScroll);
+		}, 550);
 	};
 
 	return (
