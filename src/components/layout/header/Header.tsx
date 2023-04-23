@@ -12,6 +12,7 @@ interface linksProps {
 }
 
 const Header: FC = () => {
+	const offsetScroll = 0;
 	const durationScroll = 500;
 
 	const links: linksProps[] = [
@@ -20,7 +21,7 @@ const Header: FC = () => {
 			to: "/",
 			spy: true,
 			smooth: true,
-			offset: 0,
+			offset: offsetScroll,
 			duration: durationScroll
 		},
 		{
@@ -28,7 +29,7 @@ const Header: FC = () => {
 			to: "about",
 			spy: true,
 			smooth: true,
-			offset: 0,
+			offset: offsetScroll,
 			duration: durationScroll
 		},
 		{
@@ -36,7 +37,7 @@ const Header: FC = () => {
 			to: "contact",
 			spy: true,
 			smooth: true,
-			offset: 0,
+			offset: offsetScroll,
 			duration: durationScroll
 		}
 	];
