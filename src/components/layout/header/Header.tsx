@@ -40,10 +40,9 @@ const Header: FC = () => {
 	];
 
 	const handleScroll = () => {
-		window.scrollBy(0, 3);
 		setTimeout(() => {
 			window.scrollBy(0, 1);
-		}, 600);
+		}, 500);
 	};
 
 	return (
