@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 import scss from "./Header.module.scss";
 
 interface linksProps {
@@ -57,7 +57,7 @@ const Header: FC = () => {
 			<div className={scss.header}>
 				<div className={scss.content}>
 					{links.map((link) => (
-						<Link
+						<ScrollLink
 							key={link.to}
 							to={link.to}
 							spy={link.spy}
@@ -73,7 +73,7 @@ const Header: FC = () => {
 							}}
 						>
 							{link.label}
-						</Link>
+						</ScrollLink>
 					))}
 				</div>
 			</div>
